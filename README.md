@@ -3,7 +3,7 @@
 Proyecto final, que consiste en un juego de laberinto, para la materia de Diseño Digital VLSI.
 El archivo principal de este proyecto es top.vhd
 
-##LAB
+## LAB
 El proyecto consiste en un juego de laberinto con trampas con una única salida que se tiene que encontrar evitando las trampas, si choca con una trampa se le restará vidas (en total son 3), cuando el jugador encuentre la salida se mostrará el mensaje “win” y cuando pierda todas sus vidas el mensaje “lose”.
 
 ### 💻: Información
