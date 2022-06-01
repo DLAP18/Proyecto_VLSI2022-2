@@ -505,64 +505,151 @@ BEGIN
 				green <= (OTHERS =>'0');
 				blue <= (OTHERS => '0');	
 				
+--------------------------------------------------------------------------------------------------
+
+		elsif((row >270 and row <370) and (column>20 and column<35))THEN --Letra L
+				red <= (OTHERS =>  '1');
+				green <= (OTHERS =>'0');
+				blue <= (OTHERS => '0');
 				
-		elsif((row >270 and row <370) and (column>220 and column<230))THEN --L
-				red <= (OTHERS =>  '1');
-				green <= (OTHERS =>'0');
-				blue <= (OTHERS => '0');		
-		elsif((row >370 and row <380) and (column>220 and column<280))THEN --L
+		elsif((row >355 and row <370) and (column>20 and column<80))THEN 
 				red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
 				blue <= (OTHERS => '0');	
 		
 		
-		elsif ((row > 270 and row <370) and (column>290 and column<300)) THEN --Letra 0
+		elsif ((row > 270 and row <370) and (column>90 and column<105)) THEN --Letra A
 					red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
 				blue <= (OTHERS => '0');	
-		elsif ((row > 270 and row <370) and (column>350 and column<360)) THEN 
+		elsif ((row > 270 and row <370) and (column>125 and column<140)) THEN 
 				red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
 				blue <= (OTHERS => '0');	
-		elsif ((row > 270 and row <280) and (column>290 and column<360) ) THEN 
+		elsif ((row > 270 and row <285) and (column>90 and column<140) ) THEN 
 					red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
 				blue <= (OTHERS => '0');	
-		elsif ((row > 360 and row <370) and (column>290 and column<360) ) THEN 
+		elsif ((row > 315 and row <330) and (column>90 and column<140) ) THEN 
 				red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
 				blue <= (OTHERS => '0');	
+				
 		
-		elsif((row >270 and row <280) and (column>370 and column<400) )THEN --Letra S
+		elsif ((row > 270 and row <370) and (column>150 and column<165)) THEN --Letra B
 					red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
 				blue <= (OTHERS => '0');	
-		elsif((row >280 and row <310) and (column>370 and column<380) )THEN --S
+		elsif ((row > 270 and row <370) and (column>185 and column<200)) THEN 
+				red <= (OTHERS =>  '1');
+				green <= (OTHERS =>'0');
+				blue <= (OTHERS => '0');	
+		elsif ((row > 270 and row <285) and (column>150 and column<200) ) THEN 
 					red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
 				blue <= (OTHERS => '0');	
-		elsif((row >310 and row <320) and (column>370 and column<400))THEN --S
-					red <= (OTHERS =>  '1');
+		elsif ((row > 315 and row <330) and (column>150 and column<200) ) THEN 
+				red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
-				blue <= (OTHERS => '0');	
-		elsif((row >320 and row <350) and (column>390 and column<400) )THEN --S
-					red <= (OTHERS =>'1');
-				green <= (OTHERS =>'0');
-				blue <= (OTHERS => '0');	
-		elsif((row >350 and row <360) and (column>370 and column<400))THEN --S
-					red <= (OTHERS =>  '1');
+				blue <= (OTHERS => '0');
+		elsif ((row > 355 and row <370) and (column>150 and column<200) ) THEN 
+				red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
 				blue <= (OTHERS => '0');
 			
 					
-		elsif((row >280 and row <340) and (column>420 and column<430))THEN --T
+		elsif ((row > 270 and row <370) and (column>210 and column<225)) THEN --Letra E
 					red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
 				blue <= (OTHERS => '0');	
-		elsif((row >270 and row <280) and (column>410 and column<440))THEN --T
+		elsif ((row > 270 and row <285) and (column>210 and column<260) ) THEN 
 					red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
 				blue <= (OTHERS => '0');	
+		elsif ((row > 315 and row <330) and (column>210 and column<260) ) THEN 
+				red <= (OTHERS =>  '1');
+				green <= (OTHERS =>'0');
+				blue <= (OTHERS => '0');
+		elsif ((row > 355 and row <370) and (column>210 and column<260) ) THEN 
+				red <= (OTHERS =>  '1');
+				green <= (OTHERS =>'0');
+				blue <= (OTHERS => '0');	
+					
+					
+		
+		elsif ((row > 270 and row <370) and (column>270 and column<285)) THEN --Letra R
+					red <= (OTHERS =>  '1');
+				green <= (OTHERS =>'0');
+				blue <= (OTHERS => '0');	
+		elsif ((row > 270 and row <370) and (column>305 and column<320)) THEN 
+				red <= (OTHERS =>  '1');
+				green <= (OTHERS =>'0');
+				blue <= (OTHERS => '0');	
+		elsif ((row > 270 and row <285) and (column>270 and column<320) ) THEN 
+					red <= (OTHERS =>  '1');
+				green <= (OTHERS =>'0');
+				blue <= (OTHERS => '0');	
+		elsif ((row > 315 and row <330) and (column>270 and column<320) ) THEN 
+				red <= (OTHERS =>  '1');
+				green <= (OTHERS =>'0');
+				blue <= (OTHERS => '0');
+				
+				
+		elsif ((row > 270 and row <285) and (column>330 and column<380) ) THEN --Letra I
+					red <= (OTHERS =>  '1');
+				green <= (OTHERS =>'0');
+				blue <= (OTHERS => '0');	
+		elsif ((row > 355 and row <370) and (column>330 and column<380) ) THEN 
+				red <= (OTHERS =>  '1');
+				green <= (OTHERS =>'0');
+				blue <= (OTHERS => '0');
+		elsif ((row > 270 and row <370) and (column>350 and column<365) ) THEN 
+				red <= (OTHERS =>  '1');
+				green <= (OTHERS =>'0');
+				blue <= (OTHERS => '0');
+				
+				
+		elsif ((row > 270 and row <370) and (column>390 and column<405)) THEN --Letra N
+				red <= (OTHERS =>  '1');
+				green <= (OTHERS =>'0');
+				blue <= (OTHERS => '0');	
+		elsif ((row > 270 and row <370) and (column>425 and column<440)) THEN 
+				red <= (OTHERS =>  '1');
+				green <= (OTHERS =>'0');
+				blue <= (OTHERS => '0');	
+		elsif ((row > 270 and row <285) and (column>390 and column<440) ) THEN 
+				red <= (OTHERS =>  '1');
+				green <= (OTHERS =>'0');
+				blue <= (OTHERS => '0');
+				
+				
+				
+		elsif ((row > 270 and row <285) and (column>450 and column<500) ) THEN --Letra T
+				red <= (OTHERS =>  '1');
+				green <= (OTHERS =>'0');
+				blue <= (OTHERS => '0');	
+		elsif ((row > 270 and row <370) and (column>470 and column<485) ) THEN 
+				red <= (OTHERS =>  '1');
+				green <= (OTHERS =>'0');
+				blue <= (OTHERS => '0');
+				
+				
+		elsif ((row > 270 and row <370) and (column>510 and column<525)) THEN --Letra O
+				red <= (OTHERS =>  '1');
+				green <= (OTHERS =>'0');
+				blue <= (OTHERS => '0');	
+		elsif ((row > 270 and row <370) and (column>545 and column<560)) THEN 
+				red <= (OTHERS =>  '1');
+				green <= (OTHERS =>'0');
+				blue <= (OTHERS => '0');	
+		elsif ((row > 270 and row <285) and (column>510 and column<560) ) THEN 
+					red <= (OTHERS =>  '1');
+				green <= (OTHERS =>'0');
+				blue <= (OTHERS => '0');	
+		elsif ((row > 355 and row <370) and (column>510 and column<560) ) THEN 
+				red <= (OTHERS =>  '1');
+				green <= (OTHERS =>'0');
+				blue <= (OTHERS => '0');
 					
 		---------end title
 				
