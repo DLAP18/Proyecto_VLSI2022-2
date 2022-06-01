@@ -11,7 +11,7 @@ El archivo principal de este proyecto es top.vhd<br>
 Se implementa en una tarjeta FPGA Altera D10-Lite, haciendo uso de su puerto VGA y un monitor con conexión VGA.<br>
 Para el desarrollo del proyecto se utilizaron los conocimientos aprendidos en las prácticas 10 y 11 (señalización para la generación de video en formato VGA).
 
-## Aknowledgments
+## Integrantes
 El presente trabajo es realizado por los siguientes integrantes:
 <ul>
   <li>Álvarez Rodea Carolina
