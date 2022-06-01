@@ -16,7 +16,7 @@ ENTITY Dibuja IS
 	-- 
     red      :  OUT  STD_LOGIC_VECTOR(2 DOWNTO 0) := (OTHERS => '0');  --Magnitud color rojo
     green    :  OUT  STD_LOGIC_VECTOR(2 DOWNTO 0) := (OTHERS => '0');  --Magnitud color verde
-    blue     :  OUT  STD_LOGIC_VECTOR(2 DOWNTO 0) := (OTHERS => '0'); --Mgnitud color azul
+    blue     :  OUT  STD_LOGIC_VECTOR(2 DOWNTO 0) := (OTHERS => '0'); --Magnitud color azul
 	 clk : in std_logic);
 END Dibuja;
 
@@ -38,14 +38,14 @@ BEGIN
 	
   PROCESS(disp_ena, row, column)
   BEGIN
-		IF (changeit = '0' and nivel <2) THEN   --- Cambio de ivel
+		IF (changeit = '0' and nivel <2) THEN   --- Cambio de nivel
 			nivel <= nivel + 1;
 		ELSIF (changeit = '0' and nivel >1) THEN
 			nivel <= 0;
 		ELSIF (changeit = '1' AND nivel < 2) THEN
 			nivel <= nivel;
 		END IF;
-    IF((disp_ena = '1' and nivel = 1)) THEN        --display time
+    IF((disp_ena = '1' and nivel = 1)) THEN        --tiempo display
 		if 	((row > y and row <y+20) and (column>x-20 and column<x)) THEN
 				red <= (OTHERS =>  '1');
 				green <= (OTHERS =>  '1');
@@ -64,7 +64,7 @@ BEGIN
 					blue <= (OTHERS => '1');
 		
 		
-		elsif ((row > 150 and row <301) and (column>259 and column<264)and vidas = 0 ) THEN --Letra 0
+		elsif ((row > 150 and row <301) and (column>259 and column<264)and vidas = 0 ) THEN --Letra O
 					red <= (OTHERS => '0'); 
 					green <= (OTHERS =>'0');
 					blue <= (OTHERS => '1');
@@ -154,7 +154,7 @@ BEGIN
 					green <= (OTHERS =>'1');
 					blue <= (OTHERS => '0');			
 		elsif ((row > 310 and row <350) and (column>185 and column<195)and ganador = 1 )THEN --W
-			red <= (OTHERS =>  '1');
+					red <= (OTHERS =>  '1');
 					green <= (OTHERS =>'1');
 					blue <= (OTHERS => '0');
 					
@@ -814,7 +814,7 @@ BEGIN
 						y<=440;
 					end if;
 				end if;
-				if(((x>625 and x<640) and (y>100 and y<200)))then
+				if(((x>625 and x<640) and (y>100 and y<200)))then --juego ganado
 					ganador <= 1;
 					x<=35;
 						y<=440;
@@ -924,4 +924,3 @@ end process;
   
 
 END behavior;
-	

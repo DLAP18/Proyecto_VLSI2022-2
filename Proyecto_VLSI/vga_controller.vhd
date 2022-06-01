@@ -57,33 +57,33 @@ BEGIN
         END IF;
       END IF;
 		--- Recorrido de la pantalla
-      --horizontal sync signal
+      
       IF(h_count < h_pixels + h_fp OR h_count > h_pixels + h_fp + h_pulse) THEN --- Tiempo en el que se recorre horizontalmente
         h_sync <= NOT h_pol;  -- h_sync sera un pico 										--- el display	
       ELSE
         h_sync <= h_pol;      -- h_sync sera cero se regresara al inicio horizontal
       END IF;
       
-      --vertical sync signal
+      
       IF(v_count < v_pixels + v_fp OR v_count > v_pixels + v_fp + v_pulse) THEN  --- Tiempo en el que se recorre verticalmente
         v_sync <= NOT v_pol;    -- v_sync sera un pico 										--- el display	
       ELSE
         v_sync <= v_pol;         -- h_sync sera cero se regresara al inicio vertical
       END IF;
       
-      --set pixel coordinates
-      IF(h_count < h_pixels) THEN  --horiztonal display time (recorrido por pixel)
-        column <= h_count;         --set  coordenada horizontal del pixel deacuerdo al conteo
+      --estableciendo coordenadas de los pixeles
+      IF(h_count < h_pixels) THEN  --tiempo horizontal display (recorrido por pixel)
+        column <= h_count;         --asignacion coordenada horizontal del pixel de acuerdo al conteo
       END IF;
-      IF(v_count < v_pixels) THEN  --vertical display time (recorrido por pixel)
-        row <= v_count;            --set  coordenada vertical del pixel deacuerdo al conteo
+      IF(v_count < v_pixels) THEN  --tiempo vertical display (recorrido por pixel)
+        row <= v_count;            --asignacion coordenada vertical del pixel deacuerdo al conteo
       END IF;
 
-      --set display enable output
-      IF(h_count < h_pixels AND v_count < v_pixels) THEN  --display time    (mientras sea cierto se estara dibujando en el display)
-        disp_ena <= '1';                                  --enable display  (señal de display activo)
-      ELSE                                                --blanking time   (Cuando Finaliza un frame)
-        disp_ena <= '0';                                  --disable display (señal de display desactivo)
+      --display enable
+      IF(h_count < h_pixels AND v_count < v_pixels) THEN  --tiempo display (mientras sea cierto se estara dibujando en el display)
+        disp_ena <= '1';                                  --display activo
+      ELSE                                            
+        disp_ena <= '0';                                  --display desactivado
       END IF;
 		--- En el tiempo que disp_ena sera 
     END IF;
