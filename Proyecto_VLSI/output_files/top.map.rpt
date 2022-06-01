@@ -1,0 +1,499 @@
+Analysis & Synthesis report for top
+Wed Jun 01 12:03:10 2022
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: vga_controller:u2
+ 14. Parameter Settings for User Entity Instance: Dibuja:u3
+ 15. Port Connectivity Checks: "vga_controller:u2"
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Jun 01 12:03:10 2022       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; top                                         ;
+; Top-level Entity Name              ; top                                         ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 927                                         ;
+;     Total combinational functions  ; 908                                         ;
+;     Dedicated logic registers      ; 93                                          ;
+; Total registers                    ; 93                                          ;
+; Total pins                         ; 18                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                            ; top                ; top                ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                            ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                     ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------+---------+
+; relojlento.vhd                   ; yes             ; User VHDL File  ; D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/relojlento.vhd     ;         ;
+; vga_controller.vhd               ; yes             ; User VHDL File  ; D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/vga_controller.vhd ;         ;
+; gen25mhz.vhd                     ; yes             ; User VHDL File  ; D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/gen25mhz.vhd       ;         ;
+; top.vhd                          ; yes             ; User VHDL File  ; D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/top.vhd            ;         ;
+; Dibuja.vhd                       ; yes             ; User VHDL File  ; D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd         ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                               ;
++---------------------------------------------+-----------------------------+
+; Resource                                    ; Usage                       ;
++---------------------------------------------+-----------------------------+
+; Estimated Total logic elements              ; 927                         ;
+;                                             ;                             ;
+; Total combinational functions               ; 908                         ;
+; Logic element usage by number of LUT inputs ;                             ;
+;     -- 4 input functions                    ; 599                         ;
+;     -- 3 input functions                    ; 148                         ;
+;     -- <=2 input functions                  ; 161                         ;
+;                                             ;                             ;
+; Logic elements by mode                      ;                             ;
+;     -- normal mode                          ; 798                         ;
+;     -- arithmetic mode                      ; 110                         ;
+;                                             ;                             ;
+; Total registers                             ; 93                          ;
+;     -- Dedicated logic registers            ; 93                          ;
+;     -- I/O registers                        ; 0                           ;
+;                                             ;                             ;
+; I/O pins                                    ; 18                          ;
+;                                             ;                             ;
+; Embedded Multiplier 9-bit elements          ; 0                           ;
+;                                             ;                             ;
+; Maximum fan-out node                        ; vga_controller:u2|column[7] ;
+; Maximum fan-out                             ; 52                          ;
+; Total fan-out                               ; 3405                        ;
+; Average fan-out                             ; 3.28                        ;
++---------------------------------------------+-----------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                      ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------+----------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name    ; Entity Name    ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------+----------------+--------------+
+; |top                       ; 908 (0)             ; 93 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 18   ; 0            ; 0          ; |top                   ; top            ; work         ;
+;    |Dibuja:u3|             ; 818 (818)           ; 30 (30)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|Dibuja:u3         ; Dibuja         ; work         ;
+;    |gen25mhz:u1|           ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|gen25mhz:u1       ; gen25mhz       ; work         ;
+;    |relojlento:u0|         ; 30 (30)             ; 18 (18)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|relojlento:u0     ; relojlento     ; work         ;
+;    |vga_controller:u2|     ; 59 (59)             ; 44 (44)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|vga_controller:u2 ; vga_controller ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------+----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; Dibuja:u3|nivel                                    ; changeit            ; yes                    ;
+; Number of user-specified and inferred latches = 1  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; vga_controller:u2|column[10..30]       ; Stuck at GND due to stuck port data_in ;
+; vga_controller:u2|row[9..30]           ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 43 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 93    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 42    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; vga_controller:u2|column[31]            ; 36      ;
+; Dibuja:u3|y[8]                          ; 22      ;
+; Dibuja:u3|y[7]                          ; 35      ;
+; Dibuja:u3|y[5]                          ; 35      ;
+; Dibuja:u3|y[4]                          ; 31      ;
+; Dibuja:u3|y[3]                          ; 25      ;
+; vga_controller:u2|row[0]                ; 7       ;
+; vga_controller:u2|row[31]               ; 27      ;
+; Dibuja:u3|x[5]                          ; 40      ;
+; Dibuja:u3|x[1]                          ; 22      ;
+; Dibuja:u3|x[0]                          ; 13      ;
+; vga_controller:u2|column[0]             ; 17      ;
+; Dibuja:u3|vidas[0]                      ; 11      ;
+; Dibuja:u3|vidas[1]                      ; 10      ;
+; Dibuja:u3|bomb2                         ; 3       ;
+; Dibuja:u3|bomb3                         ; 3       ;
+; Dibuja:u3|bomb1                         ; 3       ;
+; Dibuja:u3|bomb6                         ; 3       ;
+; Dibuja:u3|bomb7                         ; 3       ;
+; Dibuja:u3|bomb4                         ; 3       ;
+; Dibuja:u3|bomb5                         ; 3       ;
+; Total number of inverted registers = 21 ;         ;
++-----------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+; 18:1               ; 5 bits    ; 60 LEs        ; 5 LEs                ; 55 LEs                 ; Yes        ; |top|Dibuja:u3|y[0]            ;
+; 35:1               ; 7 bits    ; 161 LEs       ; 14 LEs               ; 147 LEs                ; Yes        ; |top|Dibuja:u3|x[2]            ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 2 LEs                ; 8 LEs                  ; Yes        ; |top|Dibuja:u3|vidas[0]        ;
+; 18:1               ; 5 bits    ; 60 LEs        ; 5 LEs                ; 55 LEs                 ; Yes        ; |top|Dibuja:u3|y[8]            ;
+; 35:1               ; 3 bits    ; 69 LEs        ; 6 LEs                ; 63 LEs                 ; Yes        ; |top|Dibuja:u3|x[5]            ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |top|vga_controller:u2|v_count ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: vga_controller:u2 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; h_pulse        ; 96    ; Signed Integer                        ;
+; h_bp           ; 48    ; Signed Integer                        ;
+; h_pixels       ; 640   ; Signed Integer                        ;
+; h_fp           ; 16    ; Signed Integer                        ;
+; h_pol          ; '0'   ; Enumerated                            ;
+; v_pulse        ; 2     ; Signed Integer                        ;
+; v_bp           ; 33    ; Signed Integer                        ;
+; v_pixels       ; 480   ; Signed Integer                        ;
+; v_fp           ; 10    ; Signed Integer                        ;
+; v_pol          ; '0'   ; Enumerated                            ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Dibuja:u3 ;
++----------------+-------+-------------------------------+
+; Parameter Name ; Value ; Type                          ;
++----------------+-------+-------------------------------+
+; pixels_y       ; 800   ; Signed Integer                ;
+; pixels_x       ; 600   ; Signed Integer                ;
++----------------+-------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "vga_controller:u2" ;
++---------+-------+----------+------------------+
+; Port    ; Type  ; Severity ; Details          ;
++---------+-------+----------+------------------+
+; reset_n ; Input ; Info     ; Stuck at VCC     ;
++---------+-------+----------+------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 18                          ;
+; cycloneiii_ff         ; 93                          ;
+;     ENA               ; 42                          ;
+;     plain             ; 51                          ;
+; cycloneiii_lcell_comb ; 908                         ;
+;     arith             ; 110                         ;
+;         2 data inputs ; 67                          ;
+;         3 data inputs ; 43                          ;
+;     normal            ; 798                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 8                           ;
+;         2 data inputs ; 84                          ;
+;         3 data inputs ; 105                         ;
+;         4 data inputs ; 599                         ;
+;                       ;                             ;
+; Max LUT depth         ; 11.00                       ;
+; Average LUT depth     ; 7.71                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Wed Jun 01 12:02:56 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file relojlento.vhd
+    Info (12022): Found design unit 1: relojlento-arqrelojlento File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/relojlento.vhd Line: 11
+    Info (12023): Found entity 1: relojlento File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/relojlento.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file vga_controller.vhd
+    Info (12022): Found design unit 1: vga_controller-behavior File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/vga_controller.vhd Line: 26
+    Info (12023): Found entity 1: vga_controller File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/vga_controller.vhd Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file gen25mhz.vhd
+    Info (12022): Found design unit 1: gen25mhz-arqgen25mhz File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/gen25mhz.vhd Line: 10
+    Info (12023): Found entity 1: gen25mhz File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/gen25mhz.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file top.vhd
+    Info (12022): Found design unit 1: top-arq_top File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/top.vhd Line: 22
+    Info (12023): Found entity 1: top File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/top.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file dibuja.vhd
+    Info (12022): Found design unit 1: Dibuja-behavior File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 23
+    Info (12023): Found entity 1: Dibuja File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 4
+Info (12127): Elaborating entity "top" for the top level hierarchy
+Info (12129): Elaborating entity "relojlento" using architecture "A:arqrelojlento" for hierarchy "relojlento:u0" File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/top.vhd Line: 31
+Info (12129): Elaborating entity "gen25mhz" using architecture "A:arqgen25mhz" for hierarchy "gen25mhz:u1" File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/top.vhd Line: 33
+Info (12129): Elaborating entity "vga_controller" using architecture "A:behavior" for hierarchy "vga_controller:u2" File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/top.vhd Line: 35
+Info (12129): Elaborating entity "Dibuja" using architecture "A:behavior" for hierarchy "Dibuja:u3" File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/top.vhd Line: 37
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(41): signal "changeit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 41
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(41): signal "nivel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 41
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(42): signal "nivel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 42
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(43): signal "changeit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 43
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(43): signal "nivel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 43
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(45): signal "changeit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 45
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(45): signal "nivel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 45
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(46): signal "nivel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 46
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(48): signal "nivel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 48
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(49): signal "y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 49
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(49): signal "x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 49
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(57): signal "vidas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 57
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(61): signal "vidas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 61
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(67): signal "vidas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 67
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(71): signal "vidas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 71
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(75): signal "vidas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 75
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(79): signal "vidas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 79
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(84): signal "vidas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 84
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(88): signal "vidas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 88
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(92): signal "vidas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 92
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(96): signal "vidas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 96
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(100): signal "vidas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 100
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(104): signal "vidas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 104
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(108): signal "vidas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 108
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(113): signal "vidas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 113
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(117): signal "vidas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 117
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(121): signal "vidas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 121
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(125): signal "vidas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 125
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(133): signal "ganador" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 133
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(138): signal "ganador" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 138
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(142): signal "ganador" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 142
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(147): signal "ganador" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 147
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(152): signal "ganador" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 152
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(156): signal "ganador" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 156
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(162): signal "ganador" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 162
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(170): signal "ganador" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 170
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(178): signal "ganador" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 178
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(182): signal "ganador" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 182
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(186): signal "ganador" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 186
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(190): signal "ganador" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 190
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(249): signal "vidas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 249
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(253): signal "vidas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 253
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(257): signal "vidas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 257
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(261): signal "vidas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 261
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(265): signal "vidas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 265
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(269): signal "vidas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 269
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(273): signal "vidas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 273
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(277): signal "vidas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 277
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(281): signal "vidas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 281
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(285): signal "vidas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 285
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(289): signal "vidas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 289
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(293): signal "vidas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 293
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(297): signal "vidas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 297
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(301): signal "vidas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 301
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(305): signal "vidas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 305
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(309): signal "vidas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 309
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(313): signal "vidas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 313
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(317): signal "vidas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 317
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(420): signal "bomb1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 420
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(427): signal "bomb2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 427
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(434): signal "bomb3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 434
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(442): signal "bomb4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 442
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(449): signal "bomb5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 449
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(456): signal "bomb6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 456
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(464): signal "bomb7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 464
+Warning (10492): VHDL Process Statement warning at Dibuja.vhd(484): signal "nivel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 484
+Warning (10631): VHDL Process Statement warning at Dibuja.vhd(39): inferring latch(es) for signal or variable "nivel", which holds its previous value in one or more paths through the process File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 39
+Info (10041): Inferred latch for "nivel" at Dibuja.vhd(39) File: D:/dlap-/Videos/VLSI/ProyectoFinal/OtroProyecto/Proyecto_VLSI/Dibuja.vhd Line: 39
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 965 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
+    Info (21059): Implemented 11 output pins
+    Info (21061): Implemented 947 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 68 warnings
+    Info: Peak virtual memory: 4804 megabytes
+    Info: Processing ended: Wed Jun 01 12:03:10 2022
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:27
+
+

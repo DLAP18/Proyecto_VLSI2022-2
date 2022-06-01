@@ -1,0 +1,36 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity top is
+	port(
+		clkl: in std_logic;
+		pixel_clk :  IN   STD_LOGIC;  --pixel clock at frequency of VGA mode being used
+		reset_n   :  IN   STD_LOGIC;  --active low asycnchronous reset
+		red      :  OUT  STD_LOGIC_VECTOR(7 DOWNTO 0) := (OTHERS => '0');  --red magnitude output to DAC
+		green    :  OUT  STD_LOGIC_VECTOR(7 DOWNTO 0) := (OTHERS => '0');  --green magnitude output to DAC
+		blue     :  OUT  STD_LOGIC_VECTOR(7 DOWNTO 0) := (OTHERS => '0'); --blue magnitude output to DAC
+		h_sync    :  OUT  STD_LOGIC;  --horiztonal sync pulse
+		v_sync    :  OUT  STD_LOGIC;  --vertical sync pulse
+		n_blank   :  OUT  STD_LOGIC;  --direct blacking output to DAC
+		n_sync    :  OUT  STD_LOGIC --sync-on-green output to DAC
+		);
+		
+end entity top;
+
+architecture arqtop of top is
+	signal conector: std_logic;
+	signal disp_ena: std_logic;
+	signal row: integer;
+	signal column: integer;
+
+	begin
+
+	u1: work.gen25mhz(arqgen25mhz) port map (clkl,conector);
+	
+	u2: work.vga_controller(behavior) port map ( conector, reset_n, h_sync, v_sync, disp_ena, column,
+																row, n_blank, n_sync);
+																
+	u3: work.hw_image_generator(behavior) port map (disp_ena, row, column, red, green, blue);
+
+end arqtop;
+	
