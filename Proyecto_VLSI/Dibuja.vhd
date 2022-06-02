@@ -986,7 +986,7 @@ BEGIN
 						y<=440;
 					end if;
 				end if;
-				if(x>510 and x<536)then---------colición de bombas-----------------------
+				if(x>510 and x<536)then---------colisión de bombas-----------------------
 					if((y>310 and y<360)and bomb5 = 1)then
 						vidas <= vidas-1;
 						bomb5 <=0;
