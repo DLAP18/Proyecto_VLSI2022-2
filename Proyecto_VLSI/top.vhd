@@ -2,8 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity top is
-	port(
-		dispw: in std_logic_vector(3 downto 0); -- Se utilizaran 4 deep switch como controles
+	port(	dispw: in std_logic_vector(3 downto 0); -- Se utilizaran 4 deep switch como controles
 		input_clk: in std_logic;  -- reloj default de la FPGA
 		changeit : IN STD_LOGIC; --- boton para cambiar entre pantalla de inicio y juego
 		resetlol : IN STD_LOGIC; --- reinicia el nivel
