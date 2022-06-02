@@ -893,7 +893,7 @@ BEGIN
 				
 				
 				
-				if((x>590 and x<620))then---------colición de bombas-----------------------
+				if((x>590 and x<620))then---------colisión de bombas-----------------------
 					if((y>80 and y<145) and bomb4 = 1)then
 						vidas <= vidas-1;
 						bomb4 <= 0;
@@ -965,20 +965,20 @@ BEGIN
 				
 				
 				if((x>459 and x<490))then
-					if((y>390 and y<460) and bomb7 = 1)then---------colición de bombas-----------------------
+					if((y>390 and y<460) and bomb7 = 1)then---------colisión de bombas-----------------------
 						vidas <= vidas-1;
 						bomb7 <= 0;
 						x <= 35;
 						y <= 440;
 					end if;
 				end if;
-				if(x>15 and x<60)then---------colición de bombas-----------------------
+				if(x>15 and x<60)then---------colisión de bombas-----------------------
 					if((y>100 and y<145) and bomb3 = 1)then
 						vidas <= vidas-1;
 						bomb3 <= 0;
 						x<=35;
 						y<=440;
-					elsif((y>145 and y<200) and bomb2 = 1)then---------colición de bombas-----------------------
+					elsif((y>145 and y<200) and bomb2 = 1)then---------colisión de bombas-----------------------
 						y <= 450;
 						vidas <= vidas -1;
 						bomb2 <= 0;
