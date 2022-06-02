@@ -328,23 +328,23 @@ BEGIN
 		elsif ((row > 144 and row <150) and (column>350 and column<640)) THEN 
 				red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
-				blue <= (OTHERS => '0');
+				blue <= (OTHERS => '1');
 		elsif ((row > 144 and row <150) and (column>9 and column<150)) THEN 
 				red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
-				blue <= (OTHERS => '0');
+				blue <= (OTHERS => '1');
 		elsif ((row > 199 and row <204) and (column>280 and column<450)) THEN 
 				red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
-				blue <= (OTHERS => '0');
+				blue <= (OTHERS => '1');
 		elsif ((row > 199 and row <204) and (column>580 and column<640)) THEN 
 				red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
-				blue <= (OTHERS => '0');
+				blue <= (OTHERS => '1');
 		elsif ((row > 199 and row <204) and (column>9 and column<80)) THEN 
 				red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
-				blue <= (OTHERS => '0');
+				blue <= (OTHERS => '1');
 		elsif ((row > 255 and row <260) and (column>50 and column<150)) THEN 
 				red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
@@ -352,119 +352,119 @@ BEGIN
 		elsif ((row > 255 and row <260) and (column>350 and column<500)) THEN 
 				red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
-				blue <= (OTHERS => '0');
+				blue <= (OTHERS => '1');
 		elsif ((row > 309 and row <314) and (column>150 and column<450)) THEN 
 				red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
-				blue <= (OTHERS => '0');
+				blue <= (OTHERS => '1');
 		elsif ((row > 309 and row <314) and (column>500 and column<580)) THEN 
 				red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
-				blue <= (OTHERS => '0');
+				blue <= (OTHERS => '1');
 		elsif ((row > 359 and row <364) and (column>80 and column<280)) THEN 
 			red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
-				blue <= (OTHERS => '0');
+				blue <= (OTHERS => '1');
 		elsif ((row > 359 and row <364) and (column>500 and column<580)) THEN 
 				red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
-				blue <= (OTHERS => '0');
+				blue <= (OTHERS => '1');
 		elsif ((row > 409 and row <414) and (column>9 and column<80)) THEN 
 				red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
-				blue <= (OTHERS => '0');
+				blue <= (OTHERS => '1');
 		elsif ((row > 409 and row <414) and (column>150 and column<400)) THEN 
 				red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
-				blue <= (OTHERS => '0');
+				blue <= (OTHERS => '1');
 		elsif ((row > 409 and row <414) and (column>450 and column<500)) THEN 
 				red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
-				blue <= (OTHERS => '0');
+				blue <= (OTHERS => '1');
 		---------------------------------Verticales----------------------------
 		elsif ((row > 144 and row <257) and (column>145 and column<150)) THEN 
 				red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
-				blue <= (OTHERS => '0');
+				blue <= (OTHERS => '1');
 		elsif ((row > 310 and row <414) and (column>77 and column<82)) THEN 
 				red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
-				blue <= (OTHERS => '0');
+				blue <= (OTHERS => '1');
 		elsif ((row > 100 and row <200) and (column>280 and column<285)) THEN 
 				red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
-				blue <= (OTHERS => '0');
+				blue <= (OTHERS => '1');
 		elsif ((row > 148 and row <364) and (column>496 and column<502)) THEN 
 				red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
-				blue <= (OTHERS => '0');
+				blue <= (OTHERS => '1');
 		elsif ((row > 148 and row <314) and (column>220 and column<225)) THEN 
 				red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
-				blue <= (OTHERS => '0');
+				blue <= (OTHERS => '1');
 		elsif ((row > 370 and row <471) and (column>450 and column<455)) THEN 
 				red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
-				blue <= (OTHERS => '0');
+				blue <= (OTHERS => '1');
 		elsif ((row > 264 and row <314) and (column>575 and column<580)) THEN 
 				red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
-				blue <= (OTHERS => '0');
+				blue <= (OTHERS => '1');
 		elsif ((row > 310 and row <410) and (column>395 and column<400)) THEN 
 				red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
-				blue <= (OTHERS => '0');
+				blue <= (OTHERS => '1');
 		
 	--------Bombas a activar
 		--Bomba 1
 		elsif ((row > 385 and row <400) and (column>25 and column<55)and bomb1 = 1) THEN 
-				red <= (OTHERS =>  '0');
+				red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
-				blue <= (OTHERS => '1');
+				blue <= (OTHERS => '0');
 		
 				
 		-------Bomba 2
 		elsif ((row > 180 and row <195) and (column>25 and column<55)and bomb2 = 1) THEN 
-				red <= (OTHERS =>  '0');
+				red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
-				blue <= (OTHERS => '1');
+				blue <= (OTHERS => '0');
 				
 		
 		-------Bomba 3
 		elsif ((row > 115 and row <130) and (column>25 and column<55)and bomb3 = 1) THEN 
-				red <= (OTHERS =>  '0');
+				red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
-				blue <= (OTHERS => '1');
+				blue <= (OTHERS => '0');
 		
 				
 		
 		-------Bomba 4
 		elsif ((row > 115 and row <130) and (column>591 and column<620)and bomb4 = 1) THEN 
-				red <= (OTHERS =>  '0');
+				red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
-				blue <= (OTHERS => '1');
+				blue <= (OTHERS => '0');
 		
 		
 		-------Bomba 5
 		elsif ((row > 340 and row <355) and (column>510 and column<540)and bomb5 = 1) THEN 
-				red <= (OTHERS =>  '0');
+				red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
-				blue <= (OTHERS => '1');
+				blue <= (OTHERS => '0');
 		
 				
 		-------Bomba 6
 		elsif ((row > 290 and row <305) and (column>510 and column<540)and bomb6 = 1) THEN 
-				red <= (OTHERS =>  '0');
+				red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
-				blue <= (OTHERS => '1');
+				blue <= (OTHERS => '0');
 		
 		
 	
 		-------Bomba 7
 		elsif ((row > 440 and row <455) and (column>460 and column<490)and bomb7 = 1) THEN 
-				red <= (OTHERS =>  '0');
+				red <= (OTHERS =>  '1');
 				green <= (OTHERS =>'0');
-				blue <= (OTHERS => '1');
+				blue <= (OTHERS => '0');
 		
 				
 				
